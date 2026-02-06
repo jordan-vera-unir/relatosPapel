@@ -33,9 +33,6 @@ public class PurchaseServiceImpl implements IPurchaseService {
         return savePurchase(request);
     }
 
-
-
-
     private Purchase savePurchase(CreatePurchaseRequest request) {
         Purchase purchase = Purchase.builder()
                 .userId(request.getUserId())
@@ -62,8 +59,6 @@ public class PurchaseServiceImpl implements IPurchaseService {
 
         return repository.save(purchase);
     }
-
-
 
     @Override
     public Purchase getPurchase(String productId) {
