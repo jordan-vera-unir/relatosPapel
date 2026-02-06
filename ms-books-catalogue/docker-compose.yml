@@ -1,0 +1,10 @@
+services:
+  db-books:
+    image: postgres:15-alpine
+    container_name: postgres-books-catalogue
+    environment:
+      POSTGRES_DB: books_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
